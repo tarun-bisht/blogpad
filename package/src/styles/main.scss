@@ -1,0 +1,23 @@
+[contenteditable="true"] {
+  &:empty:before {
+    content: attr(placeholder);
+    color: #b3b3b1;
+    display: block;
+  }
+  &:focus {
+    outline: 0px solid transparent;
+  }
+  &:hover {
+    cursor: text;
+  }
+  a {
+    cursor: pointer;
+  }
+}
+code[contenteditable="true"] {
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

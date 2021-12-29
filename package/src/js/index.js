@@ -1,4 +1,6 @@
-let BlogEditor = function () {
+import '../styles/main.scss';
+
+export default function BlogPad() {
     //globals
     const input_style = "outline:none;margin:5px;padding:5px;width:180px;height:2rem;border-radius:7px 7px 7px 7px;border:1px solid #DDD;box-shadow:0 0 5px #aaa;";
     const button_style = "outline:none;cursor:pointer;display:block;margin:10px;width:4rem;height:2rem;border:1px solid #DDD;box-shadow:0 0 5px #aaa;";
@@ -20,9 +22,9 @@ let BlogEditor = function () {
 
     function setup(heading) {
 	if(heading){
-        	create_heading(editable = true, placeholder = "Title...");
+        	create_heading(true, "Title...");
 	}
-        last_focused = create_paragraph(editable = true, placeholder = "Write Content Here...");
+        last_focused = create_paragraph(true, "Write Content Here...");
     }
 
     // UTILS FUNCTIONS
@@ -168,7 +170,7 @@ let BlogEditor = function () {
         if (evt.target.innerText.trim().length > 0) {
             evt.target.innerHTML = evt.target.innerHTML.trim();
             if (next == null || next.innerText.trim().length > 0) {
-                create_paragraph(editable = true, placeholder = "Write Content Here...");
+                create_paragraph(true, "Write Content Here...");
             }
             else {
                 place_caret_to_end(next);
@@ -184,7 +186,7 @@ let BlogEditor = function () {
     function enter_press_no_trim(evt) {
         let next = evt.target.nextSibling;
         if (next == null || next.innerText.trim().length > 0) {
-            create_paragraph(editable = true, placeholder = "Write Content Here...");
+            create_paragraph(true, "Write Content Here...");
         }
         else {
             place_caret_to_end(next);
@@ -225,7 +227,7 @@ let BlogEditor = function () {
                     }
                     else if (element["tag"] == "PRE" || element["tag"] == "CODE") {
                         inline_container = undefined;
-                        let code = create_code(true, placeholder = "print(\"Hello World\")");
+                        let code = create_code(true, "print(\"Hello World\")");
                         code.innerHTML = element["html"];
                         place_caret_to_end(code);
                     }
@@ -251,7 +253,7 @@ let BlogEditor = function () {
                     }
                     else if (element["tag"] == "SPAN") {
                         if (inline_container == undefined) {
-                            inline_container = create_paragraph("true", "Write Content Here...");
+                            inline_container = create_paragraph(true, "Write Content Here...");
                         }
                         inline_container.innerHTML = inline_container.innerHTML + element["html"];
                         place_caret_to_end(inline_container);
@@ -291,14 +293,14 @@ let BlogEditor = function () {
     }
     function create_heading(editable = false, placeholder = "Text Here")
     {
-        let heading = create_tag("h1", editable = editable, placeholder = placeholder);
+        let heading = create_tag("h1", editable, placeholder);
         heading.style = "margin-bottom:3rem;font-weight:400;font-size:42px;line-height:1.25;";
         heading.addEventListener('keydown', function (evt) {
             if (evt.keyCode == 13) {
                 evt.preventDefault();
                 evt.target.innerHTML = evt.target.innerHTML.trim();
                 if (container.lastChild == evt.target) {
-                    create_paragraph(editable = true, placeholder = "Write Content Here...");
+                    create_paragraph(true, "Write Content Here...");
                 }
                 else {
                     place_caret_to_end(evt.target.nextSibling);
@@ -315,7 +317,7 @@ let BlogEditor = function () {
     }
     function create_small_heading(editable = false, placeholder = "Text Here")
     {
-        let heading = create_tag("h3", editable = editable, placeholder = placeholder);
+        let heading = create_tag("h3", editable, placeholder);
         heading.style = "margin-bottom:3rem;font-weight:400;font-size:32px;line-height:1.25;";
         heading.addEventListener('keydown', function (evt) {
             if (evt.keyCode == 8) {
@@ -338,7 +340,7 @@ let BlogEditor = function () {
         return heading;
     }
     function create_paragraph(editable = false, placeholder = "Text Here") {
-        let p = create_tag("p", editable = editable, placeholder = placeholder);
+        let p = create_tag("p", editable, placeholder);
         p.style = "margin-bottom:1.5rem;font-size:21px;color:rgba(0,0,0,.84);line-height:1.58;letter-spacing:-.003em;font-weight:400;";
         p.addEventListener('keydown', function (evt) {
             if (evt.keyCode == 8) {
@@ -362,7 +364,7 @@ let BlogEditor = function () {
         return p;
     }
     function create_code(editable = false, placeholder = "Code Here") {
-        let code = create_tag("code", editable = editable, placeholder = placeholder);
+        let code = create_tag("code", editable, placeholder);
         code.style = "display:block;font-size:14px;background-color:#eee;border-radius:20px;margin-bottom:1.5rem;padding:2rem;overflow-x:scroll;white-space:pre;";
         code.addEventListener('keydown', function (evt) {
             if (evt.keyCode == 8) {
@@ -390,7 +392,7 @@ let BlogEditor = function () {
         return a;
     }
     function create_image(imageLink, alt_text = "") {
-        let figure = create_tag("figure", false, placeholder = "");
+        let figure = create_tag("figure", false, "");
         let image = document.createElement("img");
         let caption = create_tag("figcaption", true, "Image Caption Here..");
         figure.append(image);
@@ -455,7 +457,7 @@ let BlogEditor = function () {
         return figure;
     }
     function create_break() {
-        let break_div = create_tag("div", editable = false, placeholder = "");
+        let break_div = create_tag("div", false, "");
         break_div.style = "margin-top:1rem;"
         let end = document.createElement("div");
         end.innerHTML = "...";
@@ -570,10 +572,10 @@ let BlogEditor = function () {
             document.execCommand(cmd, false, null);
         }
         else if (cmd == "insertCode") {
-            create_code(editable = true, placeholder = "print(\"Hello World\")");
+            create_code(true, "print(\"Hello World\")");
         }
         else if(cmd=="insertHeading"){
-            create_small_heading(editable=true,placeholder="Title...");
+            create_small_heading(true,"Title...");
         }
         else if (cmd == "insertHorizontalRule") {
             create_break();
@@ -611,25 +613,25 @@ let BlogEditor = function () {
             {
                 if(editor_data[index].tagName=="H1")
                 {
-                    let heading=create_heading(editable = true, placeholder = "Title...");
+                    let heading=create_heading(true, "Title...");
                     heading.innerHTML=editor_data[index].innerHTML;
                     place_caret_to_end(heading);
                 }
                 else if(editor_data[index].tagName=="H3")
                 {
-                    let heading=create_small_heading(editable = true, placeholder = "Title...");
+                    let heading=create_small_heading(true, "Title...");
                     heading.innerHTML=editor_data[index].innerHTML;
                     place_caret_to_end(heading);
                 }
                 else if(editor_data[index].tagName=="P")
                 {
-                    let paragraph=create_paragraph(editable = true, placeholder = "Write Content Here...");
+                    let paragraph=create_paragraph(true, "Write Content Here...");
                     paragraph.innerHTML=editor_data[index].innerHTML;
                     place_caret_to_end(paragraph);
                 }
                 else if(editor_data[index].tagName=="CODE")
                 {
-                    let code=create_code(true, placeholder = "print(\"Hello World\")");
+                    let code=create_code(true, "print(\"Hello World\")");
                     code.innerHTML=editor_data[index].innerHTML;
                     place_caret_to_end(code);
                 }

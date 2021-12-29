@@ -1,2 +1,0 @@
-[contenteditable=true]:empty:before{content:attr(placeholder);color:#b3b3b1;display:block}[contenteditable=true]:focus{outline:0px solid transparent}[contenteditable=true]:hover{cursor:text}[contenteditable=true] a{cursor:pointer}code[contenteditable=true]{-ms-overflow-style:none}code[contenteditable=true]::-webkit-scrollbar{display:none}
-/*# sourceMappingURL=editor.min.css.map */
