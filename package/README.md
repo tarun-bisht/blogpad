@@ -12,20 +12,6 @@ A simplistic medium style blog WYSIWYG editor for website.
 - Basic editing toolbar, which is also customizable.
 - Retrieve data from editor using JS easily with or without style applied.
 
-## Installation
-
-- Installation using cdn
-
-```html
-<script defer src="https://unpkg.com/blogpad@1.0.1/dist/blogpad.umd.js"></script>
-```
-
-- Installation using npm
-
-```bash
-npm install blogpad
-```
-
 ## Getting Started
 
 - Create a html template with a textarea that will be converted to blogpad editor by this library. Assign an id to textarea so that we can pass that element to library.
@@ -157,11 +143,3 @@ We can also look defined actions for toolbar using `toolSupported` function. Thi
 ```javascript
 console.log(pad.toolSupported());
 ```
-
-## License
-
-[MIT](https://en.wikipedia.org/wiki/MIT_License)
-
-## Contributions
-
-Improvements to project or new feature requests are welcomed, open an issue and describe improvements or new feature description.
