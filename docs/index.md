@@ -19,8 +19,8 @@ A simplistic medium style blog WYSIWYG editor for website.
 - Installation using cdn
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/blogpad@1.0.0/dist/blogpad.min.css"/>
-<script defer src="https://unpkg.com/blogpad@1.0.0/dist/blogpad.umd.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/blogpad@0.1.0/dist/blogpad.min.css"/>
+<script defer src="https://unpkg.com/blogpad@0.1.0/dist/blogpad.umd.js"></script>
 ```
 
 - Installation using npm
