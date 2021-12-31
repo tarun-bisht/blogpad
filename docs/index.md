@@ -1,8 +1,8 @@
-# Blogpad &middot; [![Live URL](https://img.shields.io/badge/Live%20URL-Live%20Project%20URL-red)](./live.html)
+# Blogpad &middot; [![Live URL](https://img.shields.io/badge/Live%20URL-Live%20Project%20URL-red)](https://www.tarunbisht.com/blogpad/live.html)
 
 A simplistic medium style blog WYSIWYG editor for website.
 
-[![Live URL](https://img.shields.io/badge/Live%20URL-Live%20Project%20URL-red)](./live.html)
+[![Live URL](https://img.shields.io/badge/Live%20URL-Live%20Project%20URL-red)](https://www.tarunbisht.com/blogpad/live.html)
 
 <img src="icon.png" width="200" height="200" alt="Blogpad icon logo">
 
@@ -21,7 +21,8 @@ A simplistic medium style blog WYSIWYG editor for website.
 - Installation using cdn
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/blogpad@1.0.0/dist/blogpad.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/blogpad@1.0.0/dist/blogpad.min.css"
+/>
 <script defer src="https://unpkg.com/blogpad@1.0.0/dist/blogpad.umd.js"></script>
 ```
 
