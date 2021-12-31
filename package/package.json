@@ -1,6 +1,6 @@
 {
   "name": "blogpad",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Simplistic WYSIWYG Medium style blog for website",
   "main": "dist/blogpad.cjs.js",
   "module": "dist/blogpad.esm.js",
