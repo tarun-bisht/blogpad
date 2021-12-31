@@ -1,10 +1,10 @@
-# Blogpad &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/tarun-bisht/blogpad/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/blogpad) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg) [![Live URL](https://img.shields.io/badge/Live%20URL-Live%20Project%20URL-red)](../example/index.html)
+# Blogpad &middot; [![Live URL](https://img.shields.io/badge/Live%20URL-Live%20Project%20URL-red)](../example/index.html)
 
 A simplistic medium style blog WYSIWYG editor for website.
 
 [![Live URL](https://img.shields.io/badge/Live%20URL-Live%20Project%20URL-red)](../example/index.html)
 
-<img src="docs/icon.png" width="200" height="200" alt="Blogpad icon logo">
+<img src="icon.png" width="200" height="200" alt="Blogpad icon logo">
 
 ## Features
 
@@ -21,7 +21,7 @@ A simplistic medium style blog WYSIWYG editor for website.
 - Installation using cdn
 
 ```html
-<script defer src="https://unpkg.com/blogpad@1.0.0dist/blogpad.umd.js"></script>
+<script defer src="https://unpkg.com/blogpad@1.0.0/dist/blogpad.umd.js"></script>
 ```
 
 - Installation using npm
@@ -169,3 +169,5 @@ console.log(pad.toolSupported());
 ## Contributions
 
 Improvements to project or new feature requests are welcomed, open an issue and describe improvements or new feature description.
+
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/tarun-bisht/blogpad/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/blogpad) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg) [![Live URL](https://img.shields.io/badge/Live%20URL-Live%20Project%20URL-red)](../example/index.html)
