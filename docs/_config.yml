@@ -1,6 +1,6 @@
 theme: jekyll-theme-hacker
 title: Blogpad
 description: A simplistic medium style blog WYSIWYG editor for website.
-show_downloads: ["true"]
+show_downloads: ["false"]
 github:
   live_url: https://www.tarunbisht.com/blogpad/live.html

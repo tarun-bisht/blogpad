@@ -1,5 +1,3 @@
-import BlogPad from "blogpad";
-
 window.onload = function () {
   let pad = new BlogPad();
   pad.init({

@@ -1,4 +1,4 @@
-# Blogpad &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/tarun-bisht/blogpad/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/blogpad) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg) [![Live URL](https://img.shields.io/badge/Live%20URL-Live%20Project%20URL-red)](https://www.tarunbisht.com/blogpad/live.html)
+# Blogpad &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/tarun-bisht/blogpad/blob/master/LICENSE) [![npm version](https://img.shields.io/badge/npm-package%20URL-red)](https://www.npmjs.com/package/blogpad) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg) [![Live URL](https://img.shields.io/badge/Live%20URL-Live%20Project%20URL-red)](https://www.tarunbisht.com/blogpad/live.html) [![Documentation](https://img.shields.io/badge/Documentation-Project%20Documentation)](https://www.tarunbisht.com/blogpad/)
 
 A simplistic medium style blog WYSIWYG editor for website.
 
